@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sagun Gautam</title>
+    <link href="./css/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="loader">
+        <div class="stripe"></div>
+        <div class="stripe"></div>
+        <div class="stripe"></div>
+        <div class="stripe"></div>
+        
+        <div class="claim">
+          <span>Some</span>
+          <span>Cool</span>
+          <span>Stuff.</span>
+        </div>
+    </div>
+      
+    <div class="page">
+        <div class="page-title">
+            <div class="page-title-content">
+                <h1>Hello! I'm Sagun.</h1>
+                <p>You can find me on:</p>
+            </div>
+        </div>
+        <div class="page-content">
+            <div class="page-content-item">
+                <img src="./assets/github.svg"/>
+                <h2>github</h2>
+            </div>
+            <div class="page-content-item">
+                <img src="./assets/stackoverflow.svg"/>
+                <h2>stackoverflow</h2>
+            </div>
+            <div class="page-content-item">
+                <img src="./assets/linkedin.svg"/>
+                <h2>linkedin</h2>
+            </div>
+        </div>
+        <div class="footer">
+            <p>Made with ❤️ & code</p>
+        </div>
+    </div>
+    <script>
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                const loader = document.querySelector('.loader');
+                loader.classList += ' loaded';
+                
+                setTimeout(() => {
+                    loader.classList += ' hidden';
+                }, 3325);
+            }, 1200);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 120%;
+  font-family: 'Roboto', sans-serif !important;
+}
+.page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+  position: relative;
+  z-index: 1;
+  background-image: linear-gradient(135deg, #f05f57 10%, #360940 100%);
+}
+.page-title {
+  display: flex;
+}
+.page-title-content {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.page-title-content h1 {
+  color: #fff;
+  margin-bottom: 70px;
+  font-family: 'Oswald', sans-serif;
+}
+.page-title-content p {
+  color: #fff;
+  font-size: 18px;
+  opacity: 0.8;
+}
+.page-content {
+  display: flex;
+  column-gap: 20px;
+}
+.page-content-item {
+  background-color: #fff;
+  width: 200px;
+  height: 200px;
+  border-radius: 5%;
+  cursor: pointer;
+  box-shadow: 0px 24px 21px -6px rgba(0, 0, 0, 0.1);
+  transition: ease-in 0.2s;
+  text-align: center;
+}
+.page-content-item:hover {
+  box-shadow: 0px 24px 20px 8px rgba(0, 0, 0, 0.1);
+}
+.page-content-item img {
+  position: relative;
+  width: 60%;
+  height: calc(100% - 30px);
+  padding: 10px;
+  opacity: 1;
+}
+.page-content-item h2 {
+  font-size: 14px;
+  color: #333;
+  opacity: 0.6;
+}
+
+.loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+}
+.loader .stripe {
+  flex: 1;
+  background: #000;
+  transition: transform 0.8s ease;
+  transition-delay: 1.3s;
+}
+.loader .stripe:nth-child(2) {
+  transition-delay: 1.35s;
+}
+.loader .stripe:nth-child(3) {
+  transition-delay: 1.475s;
+}
+.loader .stripe:nth-child(4) {
+  transition-delay: 1.525s;
+}
+.loader .claim {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  font-size: 1.5em;
+  color: #fff;
+}
+.loader .claim span {
+  display: inline-block;
+  transform: translate3d(0, 150%, 0);
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+.loader .claim span:nth-child(2) {
+  transition-delay: 0.4s;
+}
+.loader .claim span:nth-child(3) {
+  transition-delay: 0.8s;
+}
+.loader.loaded .stripe {
+  transform: translate3d(0, 100%, 0);
+}
+.loader.loaded .claim span {
+  transform: translate3d(0, 0%, 0);
+  opacity: 1;
+  animation: disappear 0.55s ease 1.2s forwards;
+}
+.loader.loaded .claim span:nth-child(2) {
+  animation-delay: 1.28s;
+}
+.loader.loaded .claim span:nth-child(3) {
+  animation-delay: 1.34s;
+}
+.loader.hidden {
+  display: none;
+}
+@keyframes disappear {
+  to {
+    transform: translate3d(0, 150%, 0);
+    opacity: 0;
+  }
+}
+.footer {
+  position: absolute;
+  bottom: 20px;
+  text-align: center;
+}
+.footer p {
+  color: #fff;
+  font-size: 14px;
+  opacity: 0.8;
+}
